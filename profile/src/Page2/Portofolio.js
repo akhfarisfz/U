@@ -1,21 +1,36 @@
 import React from "react";
+import { FaBackspace } from "react-icons/fa";
 import imgPf from "../Asset/AssetPorto/aripPf1.png";
+import imgPf2 from "../Asset/AssetPorto/aripPf2.png";
+import bg from "../Asset/Bacground/bg1.jpg";
 import Portofolio1 from "./Portofolio1";
 import Portofolio2 from "./Portofolio2";
 function Portofolio() {
   return (
-    <div>
-      <div></div>
+    <div
+      className="bg-fixed bg-cover bg-center "
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      <FaBackspace className="size-12 mt-7 ml-20" />
+      <div className="flex justify-center pt-5 pb-16">
+        <h1 className="text-6xl text-slate-500 font-bold pr-5">Our</h1>
+        <h1 className="text-6xl font-bold">Project</h1>
+      </div>
       <div>
         <Portofolio1
-          judul="classification of monkey pox"
-          desct="Application to differentiate between common smallpox and monkey pox, by utilizing classification of existing data on common small pox and monkey pox."
           src={imgPf}
           alt="Image"
+          judul="classification of monkey pox"
+          desct="Application to differentiate between common smallpox and monkey pox, by utilizing classification of existing data on common small pox and monkey pox."
         />
-        <Portofolio2 />
+        <Portofolio2
+          src={imgPf2}
+          alt="Image"
+          judul="Mini Game"
+          desct="Simple games that are easy to play anytime and anywhere, games to train reflexes and train focus."
+        />
       </div>
-      <div></div>
+      <FaBackspace className="size-12 mt-7 ml-20" />
     </div>
   );
 }
