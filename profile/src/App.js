@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./Page1/Footer";
 // import Header from "./Page1/Header";
 // import Index from "./Page1/Index";
+import Services from "./Page1/Services";
 import Portofolio from "./Page2/Portofolio";
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
     >
       {/* <Header />
       <Index /> */}
+      <Services />
       <Portofolio />
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }

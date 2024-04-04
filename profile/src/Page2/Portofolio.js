@@ -2,7 +2,7 @@ import React from "react";
 import { FaBackspace } from "react-icons/fa";
 import imgPf from "../Asset/AssetPorto/aripPf1.png";
 import imgPf2 from "../Asset/AssetPorto/aripPf2.png";
-import imgPf3 from "../Asset/AssetPorto/WhatsApp Image 2024-04-04 at 04.18.29_295fde22.jpg";
+import imgPf3 from "../Asset/AssetPorto/portoWeb1.jpg";
 import bg from "../Asset/Bacground/bg1.jpg";
 import Portofolio1 from "./Portofolio1";
 import Portofolio2 from "./Portofolio2";
