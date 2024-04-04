@@ -1,18 +1,31 @@
 import React from "react";
-import Pg2 from "../Asset/AssetPorto/aripPf1.png";
-import Pg1 from "../Asset/AssetPorto/portoWeb1.jpg";
+import Pg2 from "../Asset/AssetPorto/gambar Machine learning app.jpg";
+import Pg1 from "../Asset/AssetPorto/gambar web app.png";
 function Services() {
   return (
-    <div>
-      <h2>Our product</h2>
-      <div className="grid grid-cols-2">
-        <div>
-          <h3>Web App</h3>
-          <img src={Pg1} alt="gambar" />
+    <div className="justify-center">
+      <div className="flex flex-wrap justify-center relative border-dotted border-2 border-indigo-600">
+        <div className="flex justify-center pt-5 pb-16 relative">
+          <h1 className="text-6xl text-slate-500 font-bold pr-5">Our</h1>
+          <h1 className="text-6xl font-bold">Product</h1>
         </div>
-        <div>
-          <h3>Machine Learning</h3>
-          <img src={Pg2} alt="gambar" />
+        <div className="w-60 relative">
+          <img
+            src={Pg1}
+            alt="gambar"
+            className="w-60 align-middle absolute bottom-2 left-2"
+          />
+          <p className="absolute bottom-2 left-2 text-stone-50">Web App</p>
+        </div>
+        <div className="w-60 relative">
+          <img
+            src={Pg2}
+            alt="gambar"
+            className="w-60 align-middle absolute bottom-2 left-2"
+          />
+          <p className="absolute bottom-2 left-2 text-stone-50">
+            Machine Learning
+          </p>
         </div>
       </div>
     </div>
