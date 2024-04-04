@@ -1,5 +1,6 @@
 import bg from "../src/Asset/Bacground/bg1.jpg";
 import "./App.css";
+import Footer from "./Page1/Footer";
 // import Header from "./Page1/Header";
 // import Index from "./Page1/Index";
 import Portofolio from "./Page2/Portofolio";
@@ -13,6 +14,8 @@ function App() {
       {/* <Header />
       <Index /> */}
       <Portofolio />
+      <Footer/>
+
     </div>
   );
 }
