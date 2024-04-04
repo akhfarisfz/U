@@ -19,7 +19,6 @@ function App() {
       <Services />
       <Portofolio />
       <Footer />
-      {/* <Portofolio /> */}
     </div>
   );
 }
