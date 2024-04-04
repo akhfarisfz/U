@@ -14,7 +14,7 @@ function Portofolio() {
       className="bg-fixed bg-cover bg-center "
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="mt-10 pl-20">
+      <div className="pt-10 pl-20">
         <Link to={"/"}>
           <IconButton text="Back">
             <IoArrowBackCircleSharp size={40} />
@@ -46,7 +46,7 @@ function Portofolio() {
           desct="Iris is a useful application for making it easier to access health information. Simple application designed for convenience and flexibility."
         />
       </div>
-      <div className="mt-10 pl-20">
+      <div className="pt-10 pb-10 pl-20">
         <Link to={"/"}>
           <IconButton text="Back">
             <IoArrowBackCircleSharp size={40} />
