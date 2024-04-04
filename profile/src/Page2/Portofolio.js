@@ -2,6 +2,7 @@ import React from "react";
 import { FaBackspace } from "react-icons/fa";
 import imgPf from "../Asset/AssetPorto/aripPf1.png";
 import imgPf2 from "../Asset/AssetPorto/aripPf2.png";
+import imgPf3 from "../Asset/AssetPorto/WhatsApp Image 2024-04-04 at 04.18.29_295fde22.jpg";
 import bg from "../Asset/Bacground/bg1.jpg";
 import Portofolio1 from "./Portofolio1";
 import Portofolio2 from "./Portofolio2";
@@ -28,6 +29,12 @@ function Portofolio() {
           alt="Image"
           judul="Mini Game"
           desct="Simple games that are easy to play anytime and anywhere, games to train reflexes and train focus."
+        />
+        <Portofolio1
+          src={imgPf3}
+          alt="Image"
+          judul="IRIS"
+          desct="Iris is a useful application for making it easier to access health information. Simple application designed for convenience and flexibility."
         />
       </div>
       <FaBackspace className="size-12 mt-7 ml-20" />
