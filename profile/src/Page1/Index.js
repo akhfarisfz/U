@@ -1,6 +1,5 @@
 import React from "react";
 import Ba1 from "../Asset/Bacground/bg2.png";
-import Services from "./Services";
 
 function Index() {
   return (
