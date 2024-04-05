@@ -44,7 +44,7 @@ export default function Services() {
   return (
     <div className="justify-center">
       <div className="flex flex-col items-center relative h-auto">
-        <div className="flex justify-center pt-5 pb-2">
+        <div className="flex justify-center pt-5 pb-[25px]">
           <h1 className="text-6xl text-slate-500 font-bold mr-2">Our</h1>
           <h1 className="text-6xl font-bold">Product</h1>
         </div>
@@ -63,7 +63,6 @@ export default function Services() {
           />
         </div>
       </div>
-      <hr className="my-8 w-full h-0.5 border-0 rounded bg-slate-700 drop-shadow-2xl" />
     </div>
   );
 }
