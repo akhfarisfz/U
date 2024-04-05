@@ -1,9 +1,11 @@
 import React from "react";
-import { FaBackspace } from "react-icons/fa";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import imgPf from "../Asset/AssetPorto/aripPf1.png";
 import imgPf2 from "../Asset/AssetPorto/aripPf2.png";
 import imgPf3 from "../Asset/AssetPorto/portoWeb1.jpg";
 import bg from "../Asset/Bacground/bg1.jpg";
+import IconButton from "../IconButton/IconButton";
 import Portofolio1 from "./Portofolio1";
 import Portofolio2 from "./Portofolio2";
 function Portofolio() {
@@ -12,7 +14,14 @@ function Portofolio() {
       className="bg-fixed bg-cover bg-center "
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <FaBackspace className="size-12 mt-7 ml-20" />
+      <div className="pt-10 pl-20">
+        <Link to={"/"}>
+          <IconButton text="Back">
+            <IoArrowBackCircleSharp size={40} />
+          </IconButton>
+        </Link>
+      </div>
+
       <div className="flex justify-center pt-5 pb-16">
         <h1 className="text-6xl text-slate-500 font-bold pr-5">Our</h1>
         <h1 className="text-6xl font-bold">Project</h1>
@@ -37,7 +46,13 @@ function Portofolio() {
           desct="Iris is a useful application for making it easier to access health information. Simple application designed for convenience and flexibility."
         />
       </div>
-      <FaBackspace className="size-12 mt-7 ml-20" />
+      <div className="pt-10 pb-10 pl-20">
+        <Link to={"/"}>
+          <IconButton text="Back">
+            <IoArrowBackCircleSharp size={40} />
+          </IconButton>
+        </Link>
+      </div>
     </div>
   );
 }
