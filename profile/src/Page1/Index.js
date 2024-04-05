@@ -19,7 +19,7 @@ function Index() {
         </h1>
         <Link>
           <button className="bg-slate-400 text-center mt-20 px-7  py-2 font-bold rounded-md text-2xl">
-            Contac Us
+            Contact Us
           </button>
         </Link>
       </div>
