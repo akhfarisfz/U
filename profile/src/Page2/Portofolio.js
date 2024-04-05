@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import imgPf from "../Asset/AssetPorto/aripPf1.png";
 import imgPf2 from "../Asset/AssetPorto/aripPf2.png";
 import imgPf3 from "../Asset/AssetPorto/portoWeb1.jpg";
+import Portolaundry from "../Asset/AssetPorto/LaundryApp.png";
+import PortoHelpMom from "../Asset/AssetPorto/HelpMomApp.png";
 import bg from "../Asset/Bacground/bg1.jpg";
 import IconButton from "../IconButton/IconButton";
 import Portofolio1 from "./Portofolio1";
@@ -44,6 +46,18 @@ function Portofolio() {
           alt="Image"
           judul="IRIS"
           desct="Iris is a useful application for making it easier to access health information. Simple application designed for convenience and flexibility."
+        />
+        <Portofolio2
+          src={Portolaundry}
+          alt="Image"
+          judul="Laundry Express"
+          desct="Laundry Express, a web-based application, offers efficient and reliable laundry services ensuring high-quality service and customer satisfaction."
+        />
+        <Portofolio1
+          src={PortoHelpMom}
+          alt="Image"
+          judul="Help Mom App"
+          desct="Help Mom App is a simple web application that utilizes image classification technology to identify Padang cuisine, assisting users in discovering and learning about traditional dishes from the Padang region."
         />
       </div>
       <div className="pt-10 pb-10 pl-20">
