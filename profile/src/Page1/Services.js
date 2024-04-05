@@ -1,35 +1,69 @@
-import React from "react";
 import Pg2 from "../Asset/AssetPorto/gambar Machine learning app.jpg";
 import Pg1 from "../Asset/AssetPorto/gambar web app.png";
-function Services() {
+import React, { useState } from "react";
+
+function ProductDescription({ imageSrc, altImage, title, description }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="justify-center">
-      <div className="flex flex-wrap justify-center relative border-dotted border-2 border-indigo-600 h-48">
-        <div className="flex justify-center pt-5 pb-16 relative">
-          <h1 className="text-6xl text-slate-500 font-bold pr-5">Our</h1>
-          <h1 className="text-6xl font-bold">Product</h1>
-        </div>
-        <div className="w-60 relative">
-          <img
-            src={Pg1}
-            alt="gambar"
-            className="w-60 align-middle absolute bottom-2 left-2"
-          />
-          <p className="absolute bottom-2.5 left-3 text-stone-50">Web App</p>
-        </div>
-        <div className="w-60 relative">
-          <img
-            src={Pg2}
-            alt="gambar"
-            className="w-60 align-middle absolute bottom-2 left-2"
-          />
-          <p className="absolute bottom-2.5 left-3 text-stone-50">
-            Machine Learning
-          </p>
+    <div
+      className="w-[500px] relative m-2"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ position: "relative" }}
+    >
+      <div style={{ position: "relative" }}>
+        <img
+          src={imageSrc}
+          alt={altImage}
+          className="w-full h-auto align-middle rounded-lg"
+        />
+        <p
+          className={`absolute bottom-2 left-2 text-white transition-opacity duration-300 ${
+            isHovered ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          {title}
+        </p>
+      </div>
+      <div
+        className={`rounded-lg absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black bg-opacity-50 ${
+          isHovered ? "opacity-100" : "opacity-0"
+        } transition-opacity duration-300`}
+      >
+        <div className="text-white text-center">
+          <h2 className="text-lg font-semibold">{title}</h2>
+          <p className="mt-2">{description}</p>
         </div>
       </div>
     </div>
   );
 }
 
-export default Services;
+export default function Services() {
+  return (
+    <div className="justify-center">
+      <div className="flex flex-col items-center relative h-auto">
+        <div className="flex justify-center pt-5 pb-2">
+          <h1 className="text-6xl text-slate-500 font-bold mr-2">Our</h1>
+          <h1 className="text-6xl font-bold">Product</h1>
+        </div>
+        <div className="flex justify-center">
+          <ProductDescription
+            imageSrc={Pg1}
+            altImage="Web App"
+            title="Web App"
+            description="Web App berisi seperangkat alat web app"
+          />
+          <ProductDescription
+            imageSrc={Pg2}
+            altImage="Machine Learning"
+            title="Machine Learning"
+            description="Machine Learning berisi machine learning"
+          />
+        </div>
+      </div>
+      <hr className="my-8 w-full h-0.5 border-0 rounded bg-slate-700 drop-shadow-2xl" />
+    </div>
+  );
+}
