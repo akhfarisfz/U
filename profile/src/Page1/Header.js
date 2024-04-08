@@ -4,10 +4,13 @@ import { Link } from "react-scroll";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true);
   const navRef = useRef(null);
   const iconRef = useRef(null);
 
   useEffect(() => {
+    setInitialLoad(false);
+
     function handleClickOutside(event) {
       if (
         isNavOpen &&
@@ -28,6 +31,12 @@ function Header() {
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+    navRef.current.classList.remove("nav-close");
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+    navRef.current.classList.add("nav-close");
   };
 
   return (
@@ -48,7 +57,7 @@ function Header() {
       {/* Ikon */}
       <div
         ref={iconRef}
-        className="w-12 h-12 bg-slate-600 mr-[20px] flex items-center justify-center cursor-pointer rounded-full"
+        className="w-12 h-12 bg-slate-600 mr-[20px] flex items-center justify-center hover:animate-pulse cursor-pointer rounded-full"
         onClick={toggleNav}
       >
         {!isNavOpen ? (
@@ -85,22 +94,53 @@ function Header() {
       </div>
       {/* Navigasi */}
       <div
-        className={`absolute top-[48px] right-[70px] bg-slate-200 p-[13px] rounded-l-lg shadow-lg z-10 text-right transition-all duration-500 ${
-          isNavOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`absolute top-[48px] right-[70px] bg-slate-50 font-medium border-solid border-2 border-sky-500 p-[13px] rounded-l-lg shadow-lg z-10 text-right ${
+          isNavOpen && !initialLoad
+            ? "opacity-100 nav-open"
+            : "opacity-0 pointer-events-none nav-close"
         }`}
         ref={navRef}
+        onClick={closeNav}
       >
         <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
-          Home
+          <Link
+            to="cover"
+            smooth={true}
+            duration={350}
+            className="cursor-pointer"
+          >
+            Home
+          </Link>
         </a>
         <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
-          About
+          <Link
+            to="Services"
+            smooth={true}
+            duration={350}
+            className="cursor-pointer"
+          >
+            Services
+          </Link>
         </a>
         <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
-          Services
+          <Link
+            to="products"
+            smooth={true}
+            duration={400}
+            className="cursor-pointer"
+          >
+            Products
+          </Link>
         </a>
-        <a href="#" className="text-gray-600 hover:text-gray-900">
-          Contact
+        <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
+          <Link
+            to="contactUs"
+            smooth={true}
+            duration={450}
+            className="cursor-pointer"
+          >
+            Contact
+          </Link>
         </a>
       </div>
     </div>
