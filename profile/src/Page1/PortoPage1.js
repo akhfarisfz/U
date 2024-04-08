@@ -8,10 +8,12 @@ import Portofolio2 from "../Page2/Portofolio2";
 
 function PortoPage1() {
   return (
-    <div>
-      <div className="flex space-x-4 justify-center mt-24 py-20">
-        <h1 className="font-bold text-6xl text-blue-400">Project we are</h1>
-        <h1 className="font-bold text-6xl">proud of</h1>
+    <div >
+      <div className="flex space-x-4 justify-center my-20 py-19 text-center ">
+        <h1 className="font-bold text-blue-400 text-5xl lg:text-6xl ">Projects we are 
+        <span className="font-bold  text-black text-5xl lg:text-6xl"> proud of</span>
+        </h1>
+
       </div>
 
       <Portofolio1

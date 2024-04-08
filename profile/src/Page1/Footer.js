@@ -21,12 +21,12 @@ function Footer() {
     };
 
     return (
-        <footer className="bg-gray-200 px-4 md:px-8 pb-8">
-            <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-center">
+        <footer className="bg-gray-200 px-4 sm:px-8 pb-8">
+            <div className="container mx-auto pt-10">
+                <div className="sm:flex flex-col md:flex-row items-center justify-center">
                     <div className="w-full md:w-1/2 p-4 md:p-10">
                         <div class="text-left">
-                            <p class="text-4xl md:text-7xl font-bold text-yellow-500">Ready for an adventure?</p>
+                            <p class="text-4xl md:text-4xl font-bold text-yellow-500">Ready for an adventure?</p>
                             <p class="mb-4 text-sm md:text-base">Share your web ideas with us through our form and let's turn them into something amazing together!</p>
                         </div>
                     </div>

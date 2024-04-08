@@ -13,10 +13,10 @@ import Portofolio2 from "./Portofolio2";
 function Portofolio() {
   return (
     <div
-      className="bg-fixed bg-cover bg-center "
+      className="bg-fixed bg-cover bg-center mx-auto "
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="pt-10 pl-20">
+      <div className="pt-10 pl-5 sm:pl-20">
         <Link to={"/"}>
           <IconButton text="Back">
             <IoArrowBackCircleSharp size={40} />
@@ -25,8 +25,8 @@ function Portofolio() {
       </div>
 
       <div className="flex justify-center pt-5 pb-16">
-        <h1 className="text-6xl text-slate-500 font-bold pr-5">Our</h1>
-        <h1 className="text-6xl font-bold">Project</h1>
+        <h1 className="text-5xl text-slate-500 font-bold pr-5">Our</h1>
+        <h1 className="text-5xl font-bold">Project</h1>
       </div>
       <div>
         <Portofolio1
