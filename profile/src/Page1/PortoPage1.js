@@ -36,7 +36,7 @@ function PortoPage1() {
       />
       <div className=" flex justify-center">
         <Link to="/Portofolio">
-          <button className="rounded-md justify-center my-10  px-5 py-5 text-white font-bold text-2xl bg-slate-400 hover:bg-slate-700">
+          <button className="rounded-md justify-center my-10  px-5 py-5 text-white font-bold text-xl bg-slate-400 hover:bg-slate-700 sm:text-xl">
             VIEW MORE
           </button>
         </Link>
