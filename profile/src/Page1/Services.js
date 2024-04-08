@@ -7,7 +7,7 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
 
   return (
     <div
-      className="w-[500px] relative m-2"
+      className="md:w-[500px] w-[450px] relative m-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ position: "relative" }}
@@ -53,7 +53,7 @@ export default function Services() {
           </h1>
           <h1 className="text-6xl font-bold">Product</h1>
         </div>
-        <div className="flex flex-col md:flex-row justify-center">
+        <div className="flex flex-col md:flex-row justify-center w-auto">
           <ProductDescription
             imageSrc={Pg1}
             altImage="Web App"
