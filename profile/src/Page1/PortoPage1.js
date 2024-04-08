@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import imgPf from "../Asset/AssetPorto/aripPf1.png";
-import imgPf2 from "../Asset/AssetPorto/aripPf2.png";
+import Portolaundry from "../Asset/AssetPorto/LaundryApp.png";
 import imgPf3 from "../Asset/AssetPorto/portoWeb1.jpg";
 import Portofolio1 from "../Page2/Portofolio1";
 import Portofolio2 from "../Page2/Portofolio2";
@@ -9,11 +9,17 @@ import Portofolio2 from "../Page2/Portofolio2";
 function PortoPage1() {
   return (
     <div>
-      <div className="flex space-x-4 justify-center mt-24">
-        <h1 id="Our_Product" className="font-bold text-6xl text-blue-400">
-          Project we are
+      <div
+        className="flex space-x-4 justify-center my-20 py-19 text-center"
+        id="products"
+      >
+        <h1 className="font-bold text-blue-400 text-5xl lg:text-6xl ">
+          Projects we are
+          <span className="font-bold  text-black text-5xl lg:text-6xl">
+            {" "}
+            proud of
+          </span>
         </h1>
-        <h1 className="font-bold text-6xl">proud of</h1>
       </div>
 
       <Portofolio1
@@ -23,10 +29,10 @@ function PortoPage1() {
         desct="Application to differentiate between common smallpox and monkey pox, by utilizing classification of existing data on common small pox and monkey pox."
       />
       <Portofolio2
-        src={imgPf2}
+        src={Portolaundry}
         alt="Image"
-        judul="Mini Game"
-        desct="Simple games that are easy to play anytime and anywhere, games to train reflexes and train focus."
+        judul="Laundry Express"
+        desct="Laundry Express, a web-based application, offers efficient and reliable laundry services ensuring high-quality service and customer satisfaction."
       />
       <Portofolio1
         src={imgPf3}
@@ -36,7 +42,7 @@ function PortoPage1() {
       />
       <div className=" flex justify-center">
         <Link to="/Portofolio">
-          <button className="rounded-md justify-center my-10  px-5 py-5 text-white font-bold text-2xl bg-slate-400 hover:bg-slate-700">
+          <button className="rounded-md justify-center my-10  px-5 py-5 text-white font-bold text-xl bg-slate-400 hover:bg-slate-700 sm:text-xl">
             VIEW MORE
           </button>
         </Link>

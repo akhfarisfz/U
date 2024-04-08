@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Lg from "../Asset/Bacground/UpZero(2).png";
+import { Link } from "react-scroll";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -32,11 +33,17 @@ function Header() {
   return (
     <div className="relative flex items-center justify-between">
       {/* Logo */}
-      <div className="flex">
-        <div className="w-36">
-          <img className="size-36 ml-20" src={Lg} alt="Logo" />
+      <div className="flex items-center">
+        <div className="w-24 md:w-36">
+          <img
+            className="size-24 md:size-36 ml-4 md:ml-20"
+            src={Lg}
+            alt="Logo"
+          />
         </div>
-        <h1 className="text-5xl font-bold mt-14 ml-10">UPZERO</h1>
+        <h1 className="text-3xl md:text-5xl font-bold mt-6 md:mt-14 ml-4 md:ml-10">
+          UPZERO
+        </h1>
       </div>
       {/* Ikon */}
       <div
@@ -47,7 +54,7 @@ function Header() {
         {!isNavOpen ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white"
+            className="h-6 w-6 md:h-8 md:w-8 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -62,7 +69,7 @@ function Header() {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white"
+            className="h-6 w-6 md:h-8 md:w-8 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

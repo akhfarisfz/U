@@ -21,32 +21,37 @@ function Footer() {
     };
 
     return (
-        <footer className="bg-gray-200 px-8 pb-8">
-            <div className="container mx-auto ">
-
-                <div className="flex items-center justify-center">
-                    <div className="block w-1/2 p-4" >
-                        <form className="mt-4" ref={form} onSubmit={sendEmail}>
-                            <div className="mb-4">
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-700 my-3">Name</label>
-                                <input
-                                    id="name"
-                                    type="text"
-                                    placeholder="Enter your name"
-                                    className="py-2 px-4 w-full bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                />
+            <footer className="bg-gray-200 px-4 sm:px-8 pb-8" id="contactUs">
+                <div className="container mx-auto pt-10">
+                    <div className="sm:flex flex-col md:flex-row items-center justify-center">
+                        <div className="w-full md:w-1/2 p-4 md:p-10">
+                            <div class="text-left">
+                                <p class="text-4xl md:text-4xl font-bold text-yellow-500">Ready for an adventure?</p>
+                                <p class="mb-4 text-sm md:text-base">Share your web ideas with us through our form and let's turn them into something amazing together!</p>
                             </div>
-                            <div className="mb-4">
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 my-3">Email</label>
-                                <input
-                                    id="email"
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="py-2 px-4 w-full bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                />
-                            </div>
-                            <div className="mb-4">
-                                <label htmlFor="interest" className="block text-sm font-medium text-gray-700 my-3">Interest</label>
+                        </div>
+                        <div className="w-full md:w-1/2 p-4">
+                            <form className="mt-4" ref={form} onSubmit={sendEmail}>
+                                <div className="mb-4">
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 my-3">Name</label>
+                                    <input
+                                        id="name"
+                                        type="text"
+                                        placeholder="Enter your name"
+                                        className="py-2 px-4 w-full bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+                                <div className="mb-4">
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 my-3">Email</label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        className="py-2 px-4 w-full bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+                                <div className="mb-4">
+                                    <label htmlFor="interest" className="block text-sm font-medium text-gray-700 my-3">Interest</label>
                                 <input
                                     id="interest"
                                     type="text"
@@ -56,13 +61,12 @@ function Footer() {
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 my-3">Message</label>
-                                <input
-                                    type="text"
+                                <textarea
                                     id="message"
                                     rows="4"
                                     placeholder="Describe your interest"
                                     className="py-2 px-4 w-full bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                />
+                                ></textarea>
                             </div>
                             <button
                                 type="submit"
@@ -72,20 +76,12 @@ function Footer() {
                             </button>
                         </form>
                     </div>
-                    <div className="block w-1/2 p-10 " >
-                        <div class="text-left">
-                            <p class="text-7xl font-bold text-yellow-500">Ready for an adventure?</p>
-                            <p class="mb-4">Share your web ideas with us through our form and let's turn them into something amazing together!</p>
-                        </div>
 
-                    </div>
                 </div>
-
-
             </div>
         </footer>
 
+
     );
 }
-
 export default Footer;
