@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Lg from "../Asset/Bacground/UpZero(2).png";
+import { Link } from 'react-scroll';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -7,6 +8,7 @@ function Header() {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
 
   return (
     <div className="relative flex items-center justify-between">
@@ -64,19 +66,29 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                About
-              </a>
+            <Link
+                to="Services"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >Services</Link>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Services
-              </a>
+              
+              <Link
+                to="products"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >Our Products</Link>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Contact
-              </a>
+              <Link
+                to="contactUs"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >Contact US</Link>
             </li>
           </ul>
         </div>

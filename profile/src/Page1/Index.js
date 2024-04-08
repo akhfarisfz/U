@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Ba1 from "../Asset/Bacground/bg2.png";
 
@@ -22,7 +22,12 @@ function Index() {
         </h1>
         <Link>
           <button class="bg-slate-400 text-center mt-8 md:mt-20 px-7 py-2 font-bold rounded-md text-lg md:text-2xl">
-            Contact Us
+          <Link
+                to="contactUs"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >Contact US</Link>
           </button>
         </Link>
       </div>

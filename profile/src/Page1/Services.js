@@ -42,7 +42,7 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
 
 export default function Services() {
   return (
-    <div className="justify-center">
+    <div className="justify-center" id="Services">
       <div className="flex flex-col mx-20 items-center relative h-auto">
         <div className="flex justify-center pt-5 pb-[25px]">
           <h1 className="text-6xl text-slate-500 font-bold mr-2">Our</h1>
