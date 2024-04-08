@@ -12,7 +12,7 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
       onMouseLeave={() => setIsHovered(false)}
       style={{ position: "relative" }}
     >
-      <div style={{ position: "relative" }}>
+      <div className="mx-20 sm:mx-5  " style={{ position: "relative" }}>
         <img
           src={imageSrc}
           alt={altImage}
@@ -27,7 +27,7 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
         </p>
       </div>
       <div
-        className={`rounded-lg absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black bg-opacity-50 ${
+        className={`mx-20  sm:mx-5 rounded-lg absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black bg-opacity-50 ${
           isHovered ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
       >
@@ -43,12 +43,12 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
 export default function Services() {
   return (
     <div className="justify-center">
-      <div className="flex flex-col items-center relative h-auto">
+      <div className="flex flex-col mx-20 items-center relative h-auto">
         <div className="flex justify-center pt-5 pb-[25px]">
           <h1 className="text-6xl text-slate-500 font-bold mr-2">Our</h1>
           <h1 className="text-6xl font-bold">Product</h1>
         </div>
-        <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row justify-center">
           <ProductDescription
             imageSrc={Pg1}
             altImage="Web App"
