@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import Pg2 from "../Asset/AssetPorto/gambar Machine learning app.jpg";
 import Pg1 from "../Asset/AssetPorto/gambar web app.png";
-import React, { useState } from "react";
 
 function ProductDescription({ imageSrc, altImage, title, description }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -53,13 +53,13 @@ export default function Services() {
             imageSrc={Pg1}
             altImage="Web App"
             title="Web App"
-            description="Web App berisi seperangkat alat web app"
+            description="Web-based software that is easily accessible on various devices using a browser, which requires absolutely no installation on a computer."
           />
           <ProductDescription
             imageSrc={Pg2}
             altImage="Machine Learning"
             title="Machine Learning"
-            description="Machine Learning berisi machine learning"
+            description="Artificial intelligence combined with neural network technology, which produces smart technology that can learn a set of data patterns."
           />
         </div>
       </div>
