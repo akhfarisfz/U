@@ -1,8 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Lg from "../Asset/Bacground/UpZero(2).png";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const navRef = useRef(null);
+  const iconRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        isNavOpen &&
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        iconRef.current &&
+        !iconRef.current.contains(event.target)
+      ) {
+        setIsNavOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isNavOpen]);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -19,7 +40,8 @@ function Header() {
       </div>
       {/* Ikon */}
       <div
-        className="w-12 h-12 bg-gray-500 flex items-center justify-center cursor-pointer"
+        ref={iconRef}
+        className="w-12 h-12 bg-slate-600 mr-[20px] flex items-center justify-center cursor-pointer rounded-full"
         onClick={toggleNav}
       >
         {!isNavOpen ? (
@@ -55,32 +77,25 @@ function Header() {
         )}
       </div>
       {/* Navigasi */}
-      {isNavOpen && (
-        <div className="absolute top-[100px] right-0 bg-white p-4 shadow-md">
-          <ul className="flex flex-col space-y-2">
-            <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
+      <div
+        className={`absolute top-[48px] right-[70px] bg-slate-200 p-[13px] rounded-l-lg shadow-lg z-10 text-right transition-all duration-500 ${
+          isNavOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        ref={navRef}
+      >
+        <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
+          Home
+        </a>
+        <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
+          About
+        </a>
+        <a href="#" className="text-gray-600 hover:text-gray-900 mr-4">
+          Services
+        </a>
+        <a href="#" className="text-gray-600 hover:text-gray-900">
+          Contact
+        </a>
+      </div>
     </div>
   );
 }
