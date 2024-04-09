@@ -10,9 +10,8 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
       className="md:w-[500px] w-[450px] relative m-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ position: "relative" }}
     >
-      <div className="mx-20 sm:mx-5  " style={{ position: "relative" }}>
+      <div className="mx-20 sm:mx-5 relative">
         <img
           src={imageSrc}
           alt={altImage}
