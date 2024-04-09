@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Pg2 from "../Asset/AssetPorto/gambar Machine learning app.jpg";
 import Pg1 from "../Asset/AssetPorto/gambar web app.png";
 
@@ -7,12 +7,12 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
 
   return (
     <div
-      className="md:w-[500px] w-[450px] relative m-2"
+      className="md:w-full relative m-2 overflow-hidden transform transition-all duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ position: "relative" }}
+      style={{ minHeight: "250px" }}
     >
-      <div className="mx-20 sm:mx-5  " style={{ position: "relative" }}>
+      <div className="relative">
         <img
           src={imageSrc}
           alt={altImage}
@@ -27,7 +27,7 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
         </p>
       </div>
       <div
-        className={`mx-20  sm:mx-5 rounded-lg absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black bg-opacity-50 ${
+        className={`text-sm sm:text-md lg:text-xl rounded-lg absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black bg-opacity-50 ${
           isHovered ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
       >
@@ -41,6 +41,28 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
 }
 
 export default function Services() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const servicesSection = document.getElementById("Services");
+      if (servicesSection) {
+        const servicesSectionTop = servicesSection.offsetTop;
+        if (scrollY >= servicesSectionTop - window.innerHeight / 2) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Membersihkan event listener pada unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="justify-center" id="Services">
       <div className="flex flex-col mx-20 items-center relative h-auto">
@@ -53,7 +75,11 @@ export default function Services() {
           </h1>
           <h1 className="text-6xl font-bold">Product</h1>
         </div>
-        <div className="flex flex-col md:flex-row justify-center w-auto">
+        <div
+          className={`flex flex-col md:flex-row justify-center w-auto ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          } transition-all duration-700`}
+        >
           <ProductDescription
             imageSrc={Pg1}
             altImage="Web App"
