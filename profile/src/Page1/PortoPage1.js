@@ -25,7 +25,7 @@ function PortoPage1() {
       <Portofolio1
         src={imgPf}
         alt="Image"
-        judul="classification of monkey pox"
+        judul="Classification of monkey pox"
         desct="Application to differentiate between common smallpox and monkey pox, by utilizing classification of existing data on common small pox and monkey pox."
       />
       <Portofolio2
