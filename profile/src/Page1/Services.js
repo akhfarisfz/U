@@ -10,9 +10,8 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
       className="md:w-full relative m-2 overflow-hidden transform transition-all duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ minHeight: "250px" }}
     >
-      <div className="relative">
+      <div className="mx-20 sm:mx-5 relative">
         <img
           src={imageSrc}
           alt={altImage}
