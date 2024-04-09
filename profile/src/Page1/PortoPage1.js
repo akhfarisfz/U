@@ -10,7 +10,7 @@ function PortoPage1() {
   return (
     <div>
       <div
-        className="flex space-x-4 justify-center my-20 py-19 text-center"
+        className="flex space-x-4 justify-center my-20 py-19 text-center "
         id="products"
       >
         <h1 className="font-bold text-blue-400 text-5xl lg:text-6xl ">

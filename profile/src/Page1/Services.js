@@ -7,11 +7,11 @@ function ProductDescription({ imageSrc, altImage, title, description }) {
 
   return (
     <div
-      className="md:w-full relative m-2 overflow-hidden transform transition-all duration-500"
+      className="w-full md:w-full relative m-2 overflow-hidden transform transition-all duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="mx-20 sm:mx-5 relative">
+      <div className="mx-auto  relative">
         <img
           src={imageSrc}
           alt={altImage}
@@ -56,7 +56,6 @@ export default function Services() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Membersihkan event listener pada unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
